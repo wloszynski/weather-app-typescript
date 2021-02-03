@@ -1,0 +1,73 @@
+.select-place {
+  display: none;
+
+  @include respond(tab-land) {
+    grid-column: 1/7;
+    grid-row: 1/2;
+
+    color: white;
+
+    height: 26rem;
+    width: 70rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    padding: 2rem 2rem 1rem 2rem;
+
+    &__title {
+      display: flex;
+      justify-content: space-between;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+
+      & h2 {
+        font-weight: 100;
+      }
+
+      & span {
+        font-weight: 600;
+      }
+    }
+
+    &__cities {
+      height: 13rem;
+      display: flex;
+      justify-content: flex-start;
+
+      cursor: pointer;
+    }
+
+    &__city {
+      height: 16rem;
+      margin-right: 3rem;
+      &-image {
+        height: 14rem;
+        width: 10rem;
+
+        transition: all 0.3s;
+
+        img {
+          height: 100%;
+          max-width: 100%;
+          border-radius: 20px;
+          object-fit: cover;
+
+          transition: all 0.3s;
+        }
+      }
+      & .active {
+        height: 15rem;
+        width: 11rem;
+      }
+
+      &-name {
+        text-align: center;
+
+        & span {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

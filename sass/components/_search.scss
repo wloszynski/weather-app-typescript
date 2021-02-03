@@ -1,0 +1,93 @@
+.search {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  font-family: inherit;
+
+  padding: 0.6rem;
+  border-radius: 10px;
+  border: none;
+
+  transition: all 0.5s;
+  position: relative;
+
+  &__icon {
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  &__input {
+    font-family: inherit;
+    border: none;
+    outline: black;
+
+    border-radius: 10px 10px 0px 0px;
+    width: 0;
+    opacity: 0;
+    padding: 0.5rem 0;
+
+    transition: all 0.5s;
+
+    &--open {
+      opacity: 1;
+      margin-left: 0.5rem;
+      padding: 0.5rem 0 0.5rem 1rem;
+      width: 20rem;
+
+      transition: all 0.5s;
+    }
+  }
+
+  &__suggestions {
+    z-index: 20;
+    width: 20rem;
+    position: absolute;
+    top: 3.3rem;
+    right: 0.6rem;
+
+    background-color: white;
+
+    border-radius: 0 0 10px 10px;
+
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+
+    transition: all 0.5s;
+
+    @include respond(tab-port) {
+      top: 2.6rem;
+    }
+    @include respond(tab-land) {
+      top: 3rem;
+    }
+
+    & li {
+      list-style: none;
+      padding: 0.5rem 1rem;
+      color: $color-black;
+      cursor: pointer;
+
+      @include respond(tab-port) {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  &__suggestions--hidden {
+    transform: translateX(100%);
+
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  & #desktopSearch {
+    transition: all 0.5s;
+    font-size: 2rem;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}

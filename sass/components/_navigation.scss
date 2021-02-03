@@ -1,0 +1,36 @@
+.nav {
+  grid-column: 1 / end;
+  height: 7rem;
+  padding-top: 2rem;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+
+  #logo {
+    height: 4rem;
+    padding: 0.2rem;
+    transition: all 0.3s;
+    cursor: pointer;
+    animation: goOut 0.7s 7s 6;
+
+    & img {
+      height: 100%;
+    }
+  }
+
+  #logo:hover {
+    transform: scale(1.2);
+  }
+
+  @include respond(tab-land) {
+    height: 5rem;
+
+    padding: 5rem 0 0 0;
+
+    & #searchMobDiv {
+      display: none;
+    }
+  }
+}

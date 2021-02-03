@@ -1,0 +1,71 @@
+.widget {
+  grid-column: 1 / end;
+  height: 35rem;
+
+  margin-top: -5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+
+  text-align: center;
+
+  transition: opacity 0.5s;
+
+  &__date {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    text-align: left;
+
+    &-img {
+      width: 5rem;
+      margin-right: 0.5rem;
+
+      & img {
+        width: 100%;
+      }
+    }
+    &-name {
+      font-size: 2rem;
+    }
+    &-content {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__temp {
+    line-height: 10rem;
+    font-size: 10rem;
+    font-weight: 300;
+
+    &-sup {
+      vertical-align: top;
+      font-size: 3rem;
+      position: relative;
+      top: -2rem;
+    }
+  }
+
+  &__location {
+    font-size: 2.5rem;
+  }
+
+  &__additional,
+  &__air,
+  &__humidity {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  &__additional {
+    width: 25rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}

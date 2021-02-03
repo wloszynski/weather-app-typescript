@@ -1,0 +1,17 @@
+#root {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  @include respond(tab-land) {
+    grid-template-columns: repeat(9, 1fr);
+    border-radius: 2rem;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+
+    width: 105rem;
+
+    margin: auto;
+
+    place-items: center center;
+  }
+}
